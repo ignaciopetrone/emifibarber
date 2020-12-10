@@ -9,16 +9,16 @@ import Footer from "./components/footer";
 
 const App = () => (
   <div className='app-container'>
-    <Header />
     <BrowserRouter>
+      <Header />
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/my-work' component={MyWork} />
         <Route exact path='/about' component={About} />
         <Route exact path='/contact' component={Contact} />
       </Switch>
+      <Footer />
     </BrowserRouter>
-    <Footer />
   </div>
 );
 
