@@ -32,22 +32,23 @@ const networks = [
 
 const Footer = () => {
   return (
-    <div className='footer-container'>
+    <div className="footer-container">
       <p>Footer</p>
-      <div className='social-network-container'>
-        <span className='line' />
-        <ul className='icons-container'>
+      <div className="social-network-container">
+        <span className="line" />
+        <ul className="icons-container">
           {networks.map((network) => (
             <a
               href={network.url}
-              target='_blank'
+              target="_blank"
+              rel="noreferrer"
               className={`social-network ${network.name}`}
             >
               <img src={network.icon} alt={network.name} />
             </a>
           ))}
         </ul>
-        <span className='line' />
+        <span className="line" />
       </div>
       <p>Lorem ipsum, dolor sit amet consectetur </p>
       <p>© 2020 emifibarber All rights reserved.</p>
