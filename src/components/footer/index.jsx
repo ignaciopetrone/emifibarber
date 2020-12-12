@@ -33,7 +33,7 @@ const networks = [
 const Footer = () => {
   return (
     <div className="footer-container">
-      <p>Footer</p>
+      <p>Lorem ipsum, dolor sit amet consectetur </p>
       <div className="social-network-container">
         <span className="line" />
         <ul className="icons-container">
@@ -50,7 +50,6 @@ const Footer = () => {
         </ul>
         <span className="line" />
       </div>
-      <p>Lorem ipsum, dolor sit amet consectetur </p>
       <p>© 2020 emifibarber All rights reserved.</p>
     </div>
   );

@@ -1,0 +1,36 @@
+.about-container {
+  flex: 1;
+  background-color: black;
+}
+
+.about-inner {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.carousel {
+  width: 60%;
+}
+
+.personal-overview {
+  width: 40%;
+  font-family: "conforta";
+  color: white;
+}
+
+.personal-overview p:nth-child(1) {
+  text-align: left;
+}
+
+.personal-overview p:nth-child(2) {
+  text-align: center;
+}
+
+.personal-overview p:nth-child(3) {
+  text-align: justify;
+}
