@@ -10,10 +10,10 @@ const Header = () => {
     `nav-link-title${pathname === path ? " active" : ""}`;
 
   return (
-    <div className='header-container'>
-      <div className='link-container'>
+    <div className="header-container">
+      <div className="link-container">
         <Link to={"/"}>
-          <img className='logo' src={logo} alt='logo' />
+          <img className="logo" src={logo} alt="logo" />
         </Link>
         <Link to={"/"}>
           <h4 className={checkIsActive("/")}>HOME</h4>
