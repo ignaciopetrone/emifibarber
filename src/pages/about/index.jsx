@@ -84,7 +84,7 @@ const About = () => {
               aria-controls="v-pills-home"
               aria-selected="true"
             >
-              Home
+              Who
             </a>
             <a
               className="nav-link"
@@ -95,7 +95,7 @@ const About = () => {
               aria-controls="v-pills-profile"
               aria-selected="false"
             >
-              Profile
+              What
             </a>
             <a
               className="nav-link"
@@ -106,7 +106,7 @@ const About = () => {
               aria-controls="v-pills-messages"
               aria-selected="false"
             >
-              Messages
+              Why
             </a>
             <a
               className="nav-link"
@@ -117,58 +117,70 @@ const About = () => {
               aria-controls="v-pills-settings"
               aria-selected="false"
             >
-              Settings
+              Where
             </a>
           </div>
           <div className="tab-content" id="v-pills-tabContent">
             <div
-              className="tab-pane fade show active"
+              className="tab-pane fade description left show active"
               id="v-pills-home"
               role="tabpanel"
               aria-labelledby="v-pills-home-tab"
             >
-              ...
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              esse quas aut deserunt est quasi fuga magni, porro tenetur. Dolor
+              laudantium consequuntur nihil asperiores, repellendus vel?
+              Adipisci nobis quos voluptates?
             </div>
             <div
-              className="tab-pane fade"
+              className="tab-pane fade description right"
               id="v-pills-profile"
               role="tabpanel"
               aria-labelledby="v-pills-profile-tab"
             >
-              ...
+              Ipsum dolor sit amet consectetur, adipisicing elit. Praesentium
+              est corporis ea inventore quos omnis asperiores expedita atque id
+              quisquam quaerat vero porro harum doloremque tempora, debitis
+              nihil libero quae?
             </div>
             <div
-              className="tab-pane fade"
+              className="tab-pane fade description center"
               id="v-pills-messages"
               role="tabpanel"
               aria-labelledby="v-pills-messages-tab"
             >
-              ...
+              Dolor sit amet consectetur adipisicing elit. Provident quae,
+              voluptate eum saepe nam iusto aliquid explicabo. Accusantium dolor
+              incidunt blanditiis eligendi ratione obcaecati repellendus commodi
+              rem labore porro. Dolore!
             </div>
             <div
-              className="tab-pane fade"
+              className="tab-pane fade description justify"
               id="v-pills-settings"
               role="tabpanel"
               aria-labelledby="v-pills-settings-tab"
             >
-              ...
+              Sit amet consectetur adipisicing elit. Maiores rerum nihil
+              repellat sequi accusamus similique voluptatem ratione, nesciunt
+              beatae exercitationem eligendi excepturi. Explicabo quas provident
+              delectus suscipit enim, ratione aut!
             </div>
           </div>
         </div>
         {/* <div className="personal-overview">
-          <p>
+          <p className="left">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi
             accusamus, officiis veritatis deleniti nostrum doloremque odio
             ducimus, eligendi voluptates aut iure fuga temporibus quam
             recusandae minus est sed saepe voluptas?
           </p>
-          <p>
+          <p className="center">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi
             accusamus, officiis veritatis deleniti nostrum doloremque odio
             ducimus, eligendi voluptates aut iure fuga temporibus quam
             recusandae minus est sed saepe voluptas?
           </p>
-          <p>
+          <p className="justify">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi
             accusamus, officiis veritatis deleniti nostrum doloremque odio
             ducimus, eligendi voluptates aut iure fuga temporibus quam

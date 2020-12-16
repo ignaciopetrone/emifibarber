@@ -35,12 +35,12 @@
   transition: ease-in-out;
 }
 
-.active {
+.is-active {
   font-size: 25px;
   transition: ease-in-out;
   color: #d60a0a;
 }
-.active:hover {
+.is-active:hover {
   text-decoration: none;
   cursor: auto;
 }

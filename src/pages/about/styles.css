@@ -23,14 +23,23 @@
   color: white;
 }
 
-.personal-overview p:nth-child(1) {
+.left {
   text-align: left;
 }
 
-.personal-overview p:nth-child(2) {
+.right {
+  text-align: right;
+}
+
+.center {
   text-align: center;
 }
 
-.personal-overview p:nth-child(3) {
+.justify {
   text-align: justify;
+}
+
+.description {
+  color: white;
+  font-size: 23px;
 }

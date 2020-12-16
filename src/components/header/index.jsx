@@ -7,7 +7,7 @@ const Header = () => {
   const { pathname } = useLocation();
 
   const checkIsActive = (path) =>
-    `nav-link-title${pathname === path ? " active" : ""}`;
+    `nav-link-title${pathname === path ? " is-active" : ""}`;
 
   return (
     <div className="header-container">
