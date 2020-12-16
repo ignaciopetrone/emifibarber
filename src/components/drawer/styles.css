@@ -1,0 +1,17 @@
+/* Overwrite some drawer default styles */
+.MuiToolbar-root {
+  background-color: #000000 !important;
+  height: 90px;
+}
+
+.drawer-header {
+  height: 90px;
+}
+.main-logo {
+  position: absolute;
+  right: calc(50% - 140px / 2);
+}
+
+.link-icon {
+  font-size: 22px;
+}

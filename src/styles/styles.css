@@ -80,6 +80,7 @@ body {
   height: 100%;
 }
 .app-container {
+  overflow-x: hidden;
   height: 100%;
   display: flex;
   flex-direction: column;
