@@ -39,6 +39,7 @@ const Footer = () => {
         <ul className="icons-container">
           {networks.map((network) => (
             <a
+              key={network.name}
               href={network.url}
               target="_blank"
               rel="noreferrer"
