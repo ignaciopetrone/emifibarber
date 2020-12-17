@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/emifibarber/static/css/main.b4850f5d.chunk.css",
+    "main.js": "/emifibarber/static/js/main.39b583aa.chunk.js",
+    "main.js.map": "/emifibarber/static/js/main.39b583aa.chunk.js.map",
+    "runtime-main.js": "/emifibarber/static/js/runtime-main.bc26d5da.js",
+    "runtime-main.js.map": "/emifibarber/static/js/runtime-main.bc26d5da.js.map",
+    "static/js/2.3bb72da0.chunk.js": "/emifibarber/static/js/2.3bb72da0.chunk.js",
+    "static/js/2.3bb72da0.chunk.js.map": "/emifibarber/static/js/2.3bb72da0.chunk.js.map",
+    "index.html": "/emifibarber/index.html",
+    "static/css/main.b4850f5d.chunk.css.map": "/emifibarber/static/css/main.b4850f5d.chunk.css.map",
+    "static/js/2.3bb72da0.chunk.js.LICENSE.txt": "/emifibarber/static/js/2.3bb72da0.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/emifibarber/static/media/desk.5f77ef9d.jpg",
+    "static/media/logo.7afa0c68.png": "/emifibarber/static/media/logo.7afa0c68.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bc26d5da.js",
+    "static/js/2.3bb72da0.chunk.js",
+    "static/css/main.b4850f5d.chunk.css",
+    "static/js/main.39b583aa.chunk.js"
+  ]
+}
