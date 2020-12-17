@@ -14,10 +14,10 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import logo from "../../media/logo.png";
+
 import "./styles.css";
 
 const drawerWidth = 240;
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const PersistentDrawerLeft = ({ navLinks, pathname }) => {
-  const classes = useStyles();
+  const styles = useStyles();
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -85,13 +85,13 @@ const PersistentDrawerLeft = ({ navLinks, pathname }) => {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={styles.root}>
       <CssBaseline />
       <AppBar
         position="fixed"
-        onBlur={() => setTimeout(handleDrawerClose, 100)}
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: open,
+        // onBlur={() => setTimeout(handleDrawerClose, 100)}
+        className={clsx(styles.appBar, {
+          [styles.appBarShift]: open,
         })}
       >
         <Toolbar>
@@ -100,7 +100,7 @@ const PersistentDrawerLeft = ({ navLinks, pathname }) => {
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            className={clsx(classes.menuButton, open && classes.hide)}
+            className={clsx(styles.menuButton, open && styles.hide)}
           >
             <MenuIcon fontSize={"large"} />
           </IconButton>
@@ -110,15 +110,15 @@ const PersistentDrawerLeft = ({ navLinks, pathname }) => {
         </Toolbar>
       </AppBar>
       <Drawer
-        className={classes.drawer}
+        className={styles.drawer}
         variant="persistent"
         anchor="left"
         open={open}
         classes={{
-          paper: classes.drawerPaper,
+          paper: styles.drawerPaper,
         }}
       >
-        <div className={`${classes.drawerHeader} drawer-header`}>
+        <div className={`${styles.drawerHeader} drawer-header`}>
           <IconButton onClick={handleDrawerClose}>
             <MenuIcon fontSize={"large"} />
           </IconButton>
@@ -128,11 +128,11 @@ const PersistentDrawerLeft = ({ navLinks, pathname }) => {
         </div>
         <Divider />
         <List>
-          {navLinks.map(({ title, path, icon }, i) => (
+          {navLinks.map(({ title, path, icon, classes }, i) => (
             <ListItem button key={i}>
               <ListItemIcon>{icon}</ListItemIcon>
               <Link to={path}>
-                <ListItemText primary={title} />
+                <ListItemText primary={title} className={classes} />
               </Link>
             </ListItem>
           ))}

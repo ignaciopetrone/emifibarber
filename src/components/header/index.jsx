@@ -9,33 +9,38 @@ const Header = () => {
   const { pathname } = useLocation();
 
   const getClassName = (path) =>
-    `nav-link-title${pathname === path ? " active" : ""}`;
+    `link-title${pathname === path ? " is-active" : ""}`;
   console.log(isBrowser, isMobile);
 
   const navLinks = [
     {
       title: "Home",
       path: "/",
+      classes: getClassName("/"),
       icon: <i className="fas fa-home link-icon"></i>,
     },
     {
       title: "About",
       path: "/about",
+      classes: getClassName("/about"),
       icon: <i className="fas fa-user link-icon"></i>,
     },
     {
       title: "My work",
       path: "/my-work",
+      classes: getClassName("/my-work"),
       icon: <i className="fas fa-cut link-icon"></i>,
     },
     {
       title: "Prices",
       path: "/prices",
+      classes: getClassName("/prices"),
       icon: <i className="fas fa-euro-sign link-icon"></i>,
     },
     {
       title: "Contact",
       path: "/contact",
+      classes: getClassName("/contact"),
       icon: <i className="fas fa-envelope link-icon"></i>,
     },
   ];

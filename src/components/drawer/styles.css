@@ -4,14 +4,40 @@
   height: 90px;
 }
 
+.MuiPaper-root {
+  background-image: url(../../media/desk.jpg) !important;
+}
+
 .drawer-header {
   height: 90px;
+  background-color: #ffffff66;
 }
+
+.MuiIconButton-label {
+  color: #2b2725;
+}
+
 .main-logo {
   position: absolute;
   right: calc(50% - 140px / 2);
 }
 
+.MuiList-root {
+  background-color: #ffffff66;
+}
+
 .link-icon {
   font-size: 22px;
+  color: #2b2725;
+}
+
+.link-title span {
+  font-family: "conforta-light";
+  font-size: 22px;
+  color: #2b2725;
+}
+
+.is-active span {
+  font-size: 22px;
+  font-family: "conforta-bold";
 }
