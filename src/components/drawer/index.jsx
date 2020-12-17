@@ -72,10 +72,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PersistentDrawerLeft = ({ navLinks, pathname }) => {
+const PersistentDrawerLeft = ({ navLinks }) => {
   const styles = useStyles();
   const [open, setOpen] = React.useState(false);
-
+  console.log(navLinks);
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -88,8 +88,8 @@ const PersistentDrawerLeft = ({ navLinks, pathname }) => {
     <div className={styles.root}>
       <CssBaseline />
       <AppBar
-        position="fixed"
-        // onBlur={() => setTimeout(handleDrawerClose, 100)}
+        // position="fixed"
+        onBlur={() => setTimeout(handleDrawerClose, 100)}
         className={clsx(styles.appBar, {
           [styles.appBarShift]: open,
         })}
@@ -105,7 +105,7 @@ const PersistentDrawerLeft = ({ navLinks, pathname }) => {
             <MenuIcon fontSize={"large"} />
           </IconButton>
           <Link to={"/"} className="main-logo">
-            <img className="logo" src={logo} alt="logo" />
+            <img className="mobile-logo" src={logo} alt="logo" />
           </Link>
         </Toolbar>
       </AppBar>
@@ -123,7 +123,7 @@ const PersistentDrawerLeft = ({ navLinks, pathname }) => {
             <MenuIcon fontSize={"large"} />
           </IconButton>
           <Link to={"/"}>
-            <img className="logo" src={logo} alt="logo" />
+            <img className="mobile-logo" src={logo} alt="logo" />
           </Link>{" "}
         </div>
         <Divider />

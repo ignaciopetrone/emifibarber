@@ -1,16 +1,22 @@
 import React from "react";
 import "./styles.css";
 import { Link, useLocation } from "react-router-dom";
-// import logo from "../../media/logo.png";
+import logo from "../../media/logo.png";
 import { isBrowser, isMobile } from "react-device-detect";
 import PersistentDrawerLeft from "../drawer";
 
 const Header = () => {
   const { pathname } = useLocation();
 
-  const getClassName = (path) =>
-    `link-title${pathname === path ? " is-active" : ""}`;
-  console.log(isBrowser, isMobile);
+  const getClassName = (path) => {
+    if (isMobile) {
+      return `link-title${pathname === path ? " is-active" : ""}`;
+    } else {
+      return `nav-link-title${pathname === path ? " active" : ""}`;
+    }
+  };
+
+  console.log(isMobile);
 
   const navLinks = [
     {
@@ -50,11 +56,11 @@ const Header = () => {
       {isMobile && (
         <PersistentDrawerLeft navLinks={navLinks} pathname={pathname} />
       )}
-      {/* <Link to={"/"}>
-        <img className="logo" src={logo} alt="logo" />
-      </Link> */}
       {isBrowser && (
         <div className="link-container">
+          <Link to={"/"}>
+            <img className="desktop-logo" src={logo} alt="logo" />
+          </Link>
           <Link to={"/"}>
             <h4 className={getClassName("/")}>HOME</h4>
           </Link>
