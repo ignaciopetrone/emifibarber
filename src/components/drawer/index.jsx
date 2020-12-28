@@ -141,7 +141,7 @@ const DrawerLeft = ({ navLinks }) => {
           ))}
         </List>
         <Divider />
-        <LanguageSelector setLanguage={setLanguage} />
+        <LanguageSelector language={language} setLanguage={setLanguage} />
       </Drawer>
     </div>
   );

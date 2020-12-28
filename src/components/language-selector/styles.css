@@ -23,3 +23,19 @@
   padding: 5px 0;
   width: 23%;
 }
+
+.check-icon {
+  position: absolute;
+  font-size: 45px !important;
+  color: #06d50b;
+}
+
+.check-de {
+  left: 30px;
+}
+.check-en {
+  left: 112px;
+}
+.check-es {
+  left: 191px;
+}

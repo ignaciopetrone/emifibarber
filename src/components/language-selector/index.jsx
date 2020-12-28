@@ -13,7 +13,7 @@ const languages = [
   { name: "es", url: spanish },
 ];
 
-const LanguageSelector = ({ setLanguage }) => {
+const LanguageSelector = ({ language, setLanguage }) => {
   const history = useHistory();
 
   const changeLanguage = (newLanguage) => {
@@ -26,7 +26,7 @@ const LanguageSelector = ({ setLanguage }) => {
     <div className="language-selector">
       <span>Language</span>
       <div className="languages-container">
-        <CheckIcon />
+        <CheckIcon className={`check-icon check-${language}`} />
         {languages.map(({ name, url }) => (
           <img
             key={name}
@@ -40,7 +40,3 @@ const LanguageSelector = ({ setLanguage }) => {
   );
 };
 export default LanguageSelector;
-
-// germany left 30px
-// english left 112px
-// spanish left 191px
