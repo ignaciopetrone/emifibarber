@@ -16,8 +16,6 @@ const Header = () => {
     }
   };
 
-  console.log(isMobile);
-
   const navLinks = [
     {
       title: "Home",
@@ -61,21 +59,11 @@ const Header = () => {
           <Link to={"/"}>
             <img className="desktop-logo" src={logo} alt="logo" />
           </Link>
-          <Link to={"/"}>
-            <h4 className={getClassName("/")}>HOME</h4>
-          </Link>
-          <Link to={"/about"}>
-            <h4 className={getClassName("/about")}>ABOUT</h4>
-          </Link>
-          <Link to={"/my-work"}>
-            <h4 className={getClassName("/my-work")}>MY WORK</h4>
-          </Link>
-          <Link to={"/prices"}>
-            <h4 className={getClassName("/prices")}>PRICES</h4>
-          </Link>
-          <Link to={"/contact"}>
-            <h4 className={getClassName("/contact")}>CONTACT</h4>
-          </Link>
+          {navLinks.map(({ title, path, classes }) => (
+            <Link to={path} key={path}>
+              <h4 className={classes}>{title.toUpperCase()}</h4>
+            </Link>
+          ))}
         </div>
       )}
     </div>

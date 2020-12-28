@@ -14,6 +14,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import logo from "../../media/logo.png";
+import LanguageSelector from "../language-selector";
 
 import "./styles.css";
 
@@ -72,10 +73,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PersistentDrawerLeft = ({ navLinks }) => {
+const DrawerLeft = ({ navLinks }) => {
   const styles = useStyles();
   const [open, setOpen] = React.useState(false);
-  console.log(navLinks);
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -89,7 +89,7 @@ const PersistentDrawerLeft = ({ navLinks }) => {
       <CssBaseline />
       <AppBar
         // position="fixed"
-        onBlur={() => setTimeout(handleDrawerClose, 100)}
+        // onBlur={() => setTimeout(handleDrawerClose, 100)}
         className={clsx(styles.appBar, {
           [styles.appBarShift]: open,
         })}
@@ -138,9 +138,10 @@ const PersistentDrawerLeft = ({ navLinks }) => {
           ))}
         </List>
         <Divider />
+        <LanguageSelector />
       </Drawer>
     </div>
   );
 };
 
-export default PersistentDrawerLeft;
+export default DrawerLeft;
