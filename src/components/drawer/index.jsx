@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
@@ -15,6 +15,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import logo from "../../media/logo.png";
 import LanguageSelector from "../language-selector";
+import LanguageContext from "../../utils/language-context";
 
 import "./styles.css";
 
@@ -74,6 +75,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const DrawerLeft = ({ navLinks }) => {
+  const { language, setLanguage } = useContext(LanguageContext);
+
   const styles = useStyles();
   const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {
@@ -104,7 +107,7 @@ const DrawerLeft = ({ navLinks }) => {
           >
             <MenuIcon fontSize={"large"} />
           </IconButton>
-          <Link to={"/"} className="main-logo">
+          <Link to={`/${language}/`} className="main-logo">
             <img className="mobile-logo" src={logo} alt="logo" />
           </Link>
         </Toolbar>
@@ -122,7 +125,7 @@ const DrawerLeft = ({ navLinks }) => {
           <IconButton onClick={handleDrawerClose}>
             <MenuIcon fontSize={"large"} />
           </IconButton>
-          <Link to={"/"}>
+          <Link to={`/${language}/`}>
             <img className="mobile-logo" src={logo} alt="logo" />
           </Link>{" "}
         </div>
@@ -138,7 +141,7 @@ const DrawerLeft = ({ navLinks }) => {
           ))}
         </List>
         <Divider />
-        <LanguageSelector />
+        <LanguageSelector setLanguage={setLanguage} />
       </Drawer>
     </div>
   );

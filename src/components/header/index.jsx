@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./styles.css";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../media/logo.png";
 import { isBrowser, isMobile } from "react-device-detect";
 import PersistentDrawerLeft from "../drawer";
+import LanguageContext from "../../utils/language-context";
 
 const Header = () => {
   const { pathname } = useLocation();
+  const { language } = useContext(LanguageContext);
 
   const getClassName = (path) => {
     if (isMobile) {
@@ -19,32 +21,32 @@ const Header = () => {
   const navLinks = [
     {
       title: "Home",
-      path: "/",
-      classes: getClassName("/"),
+      path: `/${language}/`,
+      classes: getClassName(`/${language}/`),
       icon: <i className="fas fa-home link-icon"></i>,
     },
     {
       title: "About",
-      path: "/about",
-      classes: getClassName("/about"),
+      path: `/${language}/about`,
+      classes: getClassName(`/${language}/about`),
       icon: <i className="fas fa-user link-icon"></i>,
     },
     {
       title: "My work",
-      path: "/my-work",
-      classes: getClassName("/my-work"),
+      path: `/${language}/my-work`,
+      classes: getClassName(`/${language}/my-work`),
       icon: <i className="fas fa-cut link-icon"></i>,
     },
     {
       title: "Prices",
-      path: "/prices",
-      classes: getClassName("/prices"),
+      path: `/${language}/prices`,
+      classes: getClassName(`/${language}/prices`),
       icon: <i className="fas fa-euro-sign link-icon"></i>,
     },
     {
       title: "Contact",
-      path: "/contact",
-      classes: getClassName("/contact"),
+      path: `/${language}/contact`,
+      classes: getClassName(`/${language}/contact`),
       icon: <i className="fas fa-envelope link-icon"></i>,
     },
   ];
@@ -56,7 +58,7 @@ const Header = () => {
       )}
       {isBrowser && (
         <div className="link-container">
-          <Link to={"/"}>
+          <Link to={`/${language}/`}>
             <img className="desktop-logo" src={logo} alt="logo" />
           </Link>
           {navLinks.map(({ title, path, classes }) => (
