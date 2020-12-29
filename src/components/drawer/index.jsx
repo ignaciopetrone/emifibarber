@@ -14,7 +14,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import logo from "../../media/logo.png";
-
+import LanguageSelector from "../language-selector";
 import "./styles.css";
 
 const drawerWidth = 240;
@@ -72,10 +72,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PersistentDrawerLeft = ({ navLinks }) => {
+const DrawerLeft = ({ navLinks, langRelated, isMobile }) => {
+  const { language, setLanguage } = langRelated;
+
   const styles = useStyles();
   const [open, setOpen] = React.useState(false);
-  console.log(navLinks);
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -88,8 +90,7 @@ const PersistentDrawerLeft = ({ navLinks }) => {
     <div className={styles.root}>
       <CssBaseline />
       <AppBar
-        // position="fixed"
-        onBlur={() => setTimeout(handleDrawerClose, 100)}
+        // onBlur={() => setTimeout(handleDrawerClose, 100)}
         className={clsx(styles.appBar, {
           [styles.appBarShift]: open,
         })}
@@ -104,7 +105,7 @@ const PersistentDrawerLeft = ({ navLinks }) => {
           >
             <MenuIcon fontSize={"large"} />
           </IconButton>
-          <Link to={"/"} className="main-logo">
+          <Link to={`/${language}/`} className="main-logo">
             <img className="mobile-logo" src={logo} alt="logo" />
           </Link>
         </Toolbar>
@@ -122,7 +123,7 @@ const PersistentDrawerLeft = ({ navLinks }) => {
           <IconButton onClick={handleDrawerClose}>
             <MenuIcon fontSize={"large"} />
           </IconButton>
-          <Link to={"/"}>
+          <Link to={`/${language}/`}>
             <img className="mobile-logo" src={logo} alt="logo" />
           </Link>{" "}
         </div>
@@ -138,9 +139,13 @@ const PersistentDrawerLeft = ({ navLinks }) => {
           ))}
         </List>
         <Divider />
+        <LanguageSelector
+          langRelated={{ language, setLanguage }}
+          isMobile={isMobile}
+        />
       </Drawer>
     </div>
   );
 };
 
-export default PersistentDrawerLeft;
+export default DrawerLeft;

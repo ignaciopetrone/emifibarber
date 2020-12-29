@@ -10,11 +10,15 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  margin: 30px auto;
 }
 
 .carousel {
-  width: 60%;
+  width: 100%;
+}
+
+.img-thumbnail {
+  padding: 0px;
+  border: none;
 }
 
 .personal-overview {

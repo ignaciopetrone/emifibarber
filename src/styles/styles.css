@@ -88,7 +88,6 @@ body {
 }
 
 .body-container {
-  margin-top: 90px;
   flex: 1;
   display: flex;
 }

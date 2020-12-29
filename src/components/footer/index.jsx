@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+import staticStrings from "../../utils/strings";
+import LanguageContext from "../../utils/language-context";
 import "./styles.css";
 
 import facebook from "../../media/icons/facebook.png";
@@ -31,9 +33,10 @@ const networks = [
 ];
 
 const Footer = () => {
+  const { language } = useContext(LanguageContext);
   return (
     <div className="footer-container">
-      <p>Lorem ipsum, dolor sit amet consectetur </p>
+      <p>{staticStrings.footer.first[language]}</p>
       <div className="social-network-container">
         <span className="line" />
         <ul className="icons-container">
@@ -51,7 +54,7 @@ const Footer = () => {
         </ul>
         <span className="line" />
       </div>
-      <p>© 2020 emifibarber All rights reserved.</p>
+      <p>{staticStrings.footer.second[language]}</p>
     </div>
   );
 };

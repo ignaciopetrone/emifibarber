@@ -1,12 +1,17 @@
-import React from "react";
-import "./styles.css";
+import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../media/logo.png";
 import { isBrowser, isMobile } from "react-device-detect";
-import PersistentDrawerLeft from "../drawer";
+import DrawerLeft from "../drawer";
+import LanguageContext from "../../utils/language-context";
+import LanguageSelector from "../language-selector";
+import staticStrings from "../../utils/strings";
+import "./styles.css";
+import getClassByDevice from "../../utils/class-by-device";
 
 const Header = () => {
   const { pathname } = useLocation();
+  const { language, setLanguage } = useContext(LanguageContext);
 
   const getClassName = (path) => {
     if (isMobile) {
@@ -16,60 +21,66 @@ const Header = () => {
     }
   };
 
-  console.log(isMobile);
-
   const navLinks = [
     {
-      title: "Home",
-      path: "/",
-      classes: getClassName("/"),
+      title: staticStrings.routes.home[language],
+      path: `/${language}/`,
+      classes: getClassName(`/${language}/`),
       icon: <i className="fas fa-home link-icon"></i>,
     },
     {
-      title: "About",
-      path: "/about",
-      classes: getClassName("/about"),
+      title: staticStrings.routes.about[language],
+      path: `/${language}/about`,
+      classes: getClassName(`/${language}/about`),
       icon: <i className="fas fa-user link-icon"></i>,
     },
     {
-      title: "My work",
-      path: "/my-work",
-      classes: getClassName("/my-work"),
+      title: staticStrings.routes.myWork[language],
+      path: `/${language}/my-work`,
+      classes: getClassName(`/${language}/my-work`),
       icon: <i className="fas fa-cut link-icon"></i>,
     },
     {
-      title: "Prices",
-      path: "/prices",
-      classes: getClassName("/prices"),
+      title: staticStrings.routes.prices[language],
+      path: `/${language}/prices`,
+      classes: getClassName(`/${language}/prices`),
       icon: <i className="fas fa-euro-sign link-icon"></i>,
     },
     {
-      title: "Contact",
-      path: "/contact",
-      classes: getClassName("/contact"),
+      title: staticStrings.routes.contact[language],
+      path: `/${language}/contact`,
+      classes: getClassName(`/${language}/contact`),
       icon: <i className="fas fa-envelope link-icon"></i>,
     },
   ];
 
   return (
-    <div className="header-container">
+    <div
+      className={`header-container header-container-${getClassByDevice(
+        isMobile
+      )}`}
+    >
       {isMobile && (
-        <PersistentDrawerLeft navLinks={navLinks} pathname={pathname} />
+        <DrawerLeft
+          navLinks={navLinks}
+          pathname={pathname}
+          langRelated={{ language, setLanguage }}
+          isMobile={isMobile}
+        />
       )}
       {isBrowser && (
         <div className="link-container">
-          <Link to={"/"}>
+          <Link to={`/${language}/`}>
             <img className="desktop-logo" src={logo} alt="logo" />
           </Link>
-          {navLinks.map((navlink, i) => (
-            <Link to={navlink.path} key={i}>
-              <h4 className={getClassName(navlink.path)}>
-                {navlink.title.toUpperCase()}
-              </h4>
+          {navLinks.map(({ title, path, classes }) => (
+            <Link to={path} key={path}>
+              <h4 className={classes}>{title.toUpperCase()}</h4>
             </Link>
           ))}
         </div>
       )}
+      <LanguageSelector langRelated={{ language, setLanguage }} />
     </div>
   );
 };

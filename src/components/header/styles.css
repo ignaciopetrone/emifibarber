@@ -2,7 +2,16 @@
   width: 100%;
   background-color: black;
   display: flex;
+  align-items: center;
   flex-wrap: nowrap;
+}
+
+.header-container-mobile {
+  min-height: 90px;
+}
+
+.header-container-desktop {
+  min-height: 160px;
 }
 
 .link-container {
@@ -21,7 +30,7 @@
 }
 
 .link-container a {
-  padding: 0 15px;
+  margin: 0 15px;
   cursor: unset;
 }
 .nav-link-title {
@@ -49,57 +58,3 @@
 .desktop-logo {
   height: 150px;
 }
-
-/* .header-container {
-  width: 100%;
-  background-color: black;
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.link-container {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  height: 160px;
-  font-family: "conforta-medium";
-  letter-spacing: 1px;
-}
-
-.link-container a:first-child {
-  padding: 0;
-  cursor: pointer;
-}
-
-.link-container a {
-  padding: 0 15px;
-  cursor: unset;
-}
-.nav-link-title {
-  text-decoration: none;
-  font-size: 25px;
-  color: #793e3e;
-  cursor: pointer;
-}
-
-.nav-link-title:hover {
-  text-decoration: underline;
-  /* TODO: Apply cool transition */
-/* transition: ease-in-out;
-} */
-
-/* .active {
-  font-size: 25px;
-  transition: ease-in-out;
-  color: #d60a0a;
-}
-.active:hover {
-  text-decoration: none;
-  cursor: auto;
-}
-
-.logo {
-  height: 220px;
-} */
-/* */
