@@ -24,7 +24,6 @@ const App = () => {
     // If requested language is incorrect, redirect the user to /de/
     push("/de/");
   }
-
   const [language, setLanguage] = useState(requestedLang);
 
   return (

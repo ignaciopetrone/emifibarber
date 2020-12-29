@@ -1,11 +1,12 @@
 {
-  "homepage": "https://ignaciopetrone.github.io/emifibarber",
+  "homepage": "http://ignaciopetrone.github.io/emifibarber",
   "name": "emifibarber",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "react-scripts start",
     "build": "react-scripts build",
+    "run:build": "react-scripts start -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
