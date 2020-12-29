@@ -5,6 +5,7 @@ import logo from "../../media/logo.png";
 import { isBrowser, isMobile } from "react-device-detect";
 import PersistentDrawerLeft from "../drawer";
 import LanguageContext from "../../utils/language-context";
+import staticStrings from "../../utils/strings";
 
 const Header = () => {
   const { pathname } = useLocation();
@@ -20,31 +21,31 @@ const Header = () => {
 
   const navLinks = [
     {
-      title: "Home",
+      title: staticStrings.routes.home[language],
       path: `/${language}/`,
       classes: getClassName(`/${language}/`),
       icon: <i className="fas fa-home link-icon"></i>,
     },
     {
-      title: "About",
+      title: staticStrings.routes.about[language],
       path: `/${language}/about`,
       classes: getClassName(`/${language}/about`),
       icon: <i className="fas fa-user link-icon"></i>,
     },
     {
-      title: "My work",
+      title: staticStrings.routes.myWork[language],
       path: `/${language}/my-work`,
       classes: getClassName(`/${language}/my-work`),
       icon: <i className="fas fa-cut link-icon"></i>,
     },
     {
-      title: "Prices",
+      title: staticStrings.routes.prices[language],
       path: `/${language}/prices`,
       classes: getClassName(`/${language}/prices`),
       icon: <i className="fas fa-euro-sign link-icon"></i>,
     },
     {
-      title: "Contact",
+      title: staticStrings.routes.contact[language],
       path: `/${language}/contact`,
       classes: getClassName(`/${language}/contact`),
       icon: <i className="fas fa-envelope link-icon"></i>,

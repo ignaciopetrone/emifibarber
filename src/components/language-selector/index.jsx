@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import CheckIcon from "@material-ui/icons/Check";
+import staticStrings from "../../utils/strings";
 import "./styles.css";
 
 import german from "../../media/icons/l-german.png";
@@ -24,7 +25,7 @@ const LanguageSelector = ({ language, setLanguage }) => {
 
   return (
     <div className="language-selector">
-      <span>Language</span>
+      <span>{staticStrings.language[language]}</span>
       <div className="languages-container">
         <CheckIcon className={`check-icon check-${language}`} />
         {languages.map(({ name, url }) => (

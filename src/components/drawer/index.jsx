@@ -91,7 +91,6 @@ const DrawerLeft = ({ navLinks }) => {
     <div className={styles.root}>
       <CssBaseline />
       <AppBar
-        // position="fixed"
         // onBlur={() => setTimeout(handleDrawerClose, 100)}
         className={clsx(styles.appBar, {
           [styles.appBarShift]: open,
