@@ -2,7 +2,16 @@
   width: 100%;
   background-color: black;
   display: flex;
+  align-items: center;
   flex-wrap: nowrap;
+}
+
+.header-container-mobile {
+  min-height: 90px;
+}
+
+.header-container-desktop {
+  min-height: 160px;
 }
 
 .link-container {

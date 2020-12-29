@@ -2,6 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import CheckIcon from "@material-ui/icons/Check";
 import staticStrings from "../../utils/strings";
+import getClassByDevice from "../../utils/class-by-device";
 import "./styles.css";
 
 import german from "../../media/icons/l-german.png";
@@ -14,7 +15,8 @@ const languages = [
   { name: "es", url: spanish },
 ];
 
-const LanguageSelector = ({ language, setLanguage }) => {
+const LanguageSelector = (props) => {
+  const { language, setLanguage } = props.langRelated;
   const history = useHistory();
 
   const changeLanguage = (newLanguage) => {
@@ -24,10 +26,14 @@ const LanguageSelector = ({ language, setLanguage }) => {
   };
 
   return (
-    <div className="language-selector">
-      <span>{staticStrings.language[language]}</span>
+    <div className={`language-selector-${getClassByDevice(props.isMobile)}`}>
+      {props.isMobile && <span>{staticStrings.language[language]}</span>}
       <div className="languages-container">
-        <CheckIcon className={`check-icon check-${language}`} />
+        <CheckIcon
+          className={`check-icon check-${getClassByDevice(
+            props.isMobile
+          )}-${language}`}
+        />
         {languages.map(({ name, url }) => (
           <img
             key={name}

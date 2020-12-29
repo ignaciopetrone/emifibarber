@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
@@ -15,8 +15,6 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import logo from "../../media/logo.png";
 import LanguageSelector from "../language-selector";
-import LanguageContext from "../../utils/language-context";
-
 import "./styles.css";
 
 const drawerWidth = 240;
@@ -74,11 +72,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const DrawerLeft = ({ navLinks }) => {
-  const { language, setLanguage } = useContext(LanguageContext);
+const DrawerLeft = ({ navLinks, langRelated, isMobile }) => {
+  const { language, setLanguage } = langRelated;
 
   const styles = useStyles();
   const [open, setOpen] = React.useState(false);
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -140,7 +139,10 @@ const DrawerLeft = ({ navLinks }) => {
           ))}
         </List>
         <Divider />
-        <LanguageSelector language={language} setLanguage={setLanguage} />
+        <LanguageSelector
+          langRelated={{ language, setLanguage }}
+          isMobile={isMobile}
+        />
       </Drawer>
     </div>
   );

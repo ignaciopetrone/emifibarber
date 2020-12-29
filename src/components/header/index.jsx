@@ -1,15 +1,17 @@
 import React, { useContext } from "react";
-import "./styles.css";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../media/logo.png";
 import { isBrowser, isMobile } from "react-device-detect";
-import PersistentDrawerLeft from "../drawer";
+import DrawerLeft from "../drawer";
 import LanguageContext from "../../utils/language-context";
+import LanguageSelector from "../language-selector";
 import staticStrings from "../../utils/strings";
+import "./styles.css";
+import getClassByDevice from "../../utils/class-by-device";
 
 const Header = () => {
   const { pathname } = useLocation();
-  const { language } = useContext(LanguageContext);
+  const { language, setLanguage } = useContext(LanguageContext);
 
   const getClassName = (path) => {
     if (isMobile) {
@@ -53,9 +55,18 @@ const Header = () => {
   ];
 
   return (
-    <div className="header-container">
+    <div
+      className={`header-container header-container-${getClassByDevice(
+        isMobile
+      )}`}
+    >
       {isMobile && (
-        <PersistentDrawerLeft navLinks={navLinks} pathname={pathname} />
+        <DrawerLeft
+          navLinks={navLinks}
+          pathname={pathname}
+          langRelated={{ language, setLanguage }}
+          isMobile={isMobile}
+        />
       )}
       {isBrowser && (
         <div className="link-container">
@@ -69,6 +80,7 @@ const Header = () => {
           ))}
         </div>
       )}
+      <LanguageSelector langRelated={{ language, setLanguage }} />
     </div>
   );
 };
