@@ -1,22 +1,28 @@
 {
   "files": {
-    "main.css": "/emifibarber/static/css/main.b4850f5d.chunk.css",
-    "main.js": "/emifibarber/static/js/main.39b583aa.chunk.js",
-    "main.js.map": "/emifibarber/static/js/main.39b583aa.chunk.js.map",
+    "main.css": "/emifibarber/static/css/main.7b4a3247.chunk.css",
+    "main.js": "/emifibarber/static/js/main.f7f87943.chunk.js",
+    "main.js.map": "/emifibarber/static/js/main.f7f87943.chunk.js.map",
     "runtime-main.js": "/emifibarber/static/js/runtime-main.bc26d5da.js",
     "runtime-main.js.map": "/emifibarber/static/js/runtime-main.bc26d5da.js.map",
-    "static/js/2.3bb72da0.chunk.js": "/emifibarber/static/js/2.3bb72da0.chunk.js",
-    "static/js/2.3bb72da0.chunk.js.map": "/emifibarber/static/js/2.3bb72da0.chunk.js.map",
+    "static/js/2.d719fd24.chunk.js": "/emifibarber/static/js/2.d719fd24.chunk.js",
+    "static/js/2.d719fd24.chunk.js.map": "/emifibarber/static/js/2.d719fd24.chunk.js.map",
     "index.html": "/emifibarber/index.html",
-    "static/css/main.b4850f5d.chunk.css.map": "/emifibarber/static/css/main.b4850f5d.chunk.css.map",
-    "static/js/2.3bb72da0.chunk.js.LICENSE.txt": "/emifibarber/static/js/2.3bb72da0.chunk.js.LICENSE.txt",
+    "static/css/main.7b4a3247.chunk.css.map": "/emifibarber/static/css/main.7b4a3247.chunk.css.map",
+    "static/js/2.d719fd24.chunk.js.LICENSE.txt": "/emifibarber/static/js/2.d719fd24.chunk.js.LICENSE.txt",
     "static/media/styles.css": "/emifibarber/static/media/desk.5f77ef9d.jpg",
+    "static/media/about-1-1.c10469c1.jpg": "/emifibarber/static/media/about-1-1.c10469c1.jpg",
+    "static/media/about-1-2.fff9323e.jpg": "/emifibarber/static/media/about-1-2.fff9323e.jpg",
+    "static/media/about-1-3.af7fec1f.jpg": "/emifibarber/static/media/about-1-3.af7fec1f.jpg",
+    "static/media/l-english.683f528a.png": "/emifibarber/static/media/l-english.683f528a.png",
+    "static/media/l-german.bab1b2fe.png": "/emifibarber/static/media/l-german.bab1b2fe.png",
+    "static/media/l-spanish.d3a42cdb.png": "/emifibarber/static/media/l-spanish.d3a42cdb.png",
     "static/media/logo.7afa0c68.png": "/emifibarber/static/media/logo.7afa0c68.png"
   },
   "entrypoints": [
     "static/js/runtime-main.bc26d5da.js",
-    "static/js/2.3bb72da0.chunk.js",
-    "static/css/main.b4850f5d.chunk.css",
-    "static/js/main.39b583aa.chunk.js"
+    "static/js/2.d719fd24.chunk.js",
+    "static/css/main.7b4a3247.chunk.css",
+    "static/js/main.f7f87943.chunk.js"
   ]
 }
